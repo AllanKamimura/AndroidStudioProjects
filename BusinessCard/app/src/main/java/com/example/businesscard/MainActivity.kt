@@ -27,6 +27,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -52,28 +53,31 @@ val MyAppIcons = Icons.Rounded
 @Composable
 fun BusinessCard(modifier: Modifier) {
     Column (
-        modifier = modifier.fillMaxSize().background(Color.LightGray).padding(10.dp),
+        modifier = modifier
+            .fillMaxSize()
+            .background(Color.LightGray)
+            .padding(10.dp),
         verticalArrangement = Arrangement.Center
     ) {
         Spacer(modifier = Modifier.weight(1f))
 
         MainLogo(
-            name = "Full Name",
-            title = "Title",
+            name = stringResource(R.string.full_name),
+            title = stringResource(R.string.person_title),
             modifier = Modifier)
         Spacer(modifier = Modifier.weight(1f))
 
         ContactInfo(
             icon = MyAppIcons.Delete,
-            text = "+00 (00) 000 000 000",
+            text = stringResource(R.string.phone_number),
             modifier = Modifier)
         ContactInfo(
             icon = MyAppIcons.Menu,
-            text = "@username",
+            text = stringResource(R.string.social_media),
             modifier = Modifier)
         ContactInfo(
             icon = MyAppIcons.LocationOn,
-            text = "email@address",
+            text = stringResource(R.string.email_address),
             modifier = Modifier)
         Spacer(modifier = Modifier.weight(0.2f))
 
@@ -103,12 +107,16 @@ fun MainLogo(name: String, title: String, modifier: Modifier) {
 fun ContactInfo(icon: ImageVector, text: String, modifier: Modifier) {
     Row (
         horizontalArrangement = Arrangement.Center,
-        modifier = Modifier.fillMaxWidth().padding(4.dp)
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(4.dp)
     ){
         Icon(icon, contentDescription = null)
         Text(text,
             textAlign = TextAlign.Justify,
-            modifier = Modifier.padding(start = 16.dp).width(200.dp)
+            modifier = Modifier
+                .padding(start = 16.dp)
+                .width(200.dp)
         )
     }
 }
