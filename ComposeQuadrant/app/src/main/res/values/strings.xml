@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ComposeQuadrant</string>
+    <string name="first_title">Text composable</string>
+    <string name="first_description">Displays text and follows the recommended Material Design guidelines.</string>
+    <string name="second_title">Text composable 2</string>
+    <string name="second_description">Displays text and follows the recommended Material Design guidelines.</string>
+    <string name="third_title">Text composable 3</string>
+    <string name="third_description">Displays text and follows the recommended Material Design guidelines.</string>
+    <string name="fourth_title">Text composable 4</string>
+    <string name="fourth_description">Displays text and follows the recommended Material Design guidelines.</string>
+</resources>
